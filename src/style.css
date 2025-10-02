@@ -1,5 +1,42 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+  background: white;
+}
+
+/* Carta */
+.playing-card {
+  background: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  width: 150px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: "Georgia", serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: width 0.3s, height 0.3s;
+}
+
+/* Valor en el centro */
+.playing-card .value {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Simbolitos arriba y abajo */
+.playing-card .suit {
+  font-size: 2rem;
+}
+
+.playing-card .top {
+  align-self: flex-start;
+}
+
+.playing-card .bottom {
+  align-self: flex-end;
+  transform: rotate(180deg);
 }
