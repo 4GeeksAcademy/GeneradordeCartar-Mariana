@@ -1,12 +1,42 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+.container-fluid.bg-success {
+  background: transparent !important;
+}
+
 body {
-  background: white;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #013220;
+
+  
+  background-image:
+    linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.12)), 
+    url('./assets/img/casino-table.jpg');
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 8px 8px;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
 }
 
 /* Carta */
 .playing-card {
-  background: white;
+  background: rgba(255,255,255,0.98);
   border: 2px solid #333;
   border-radius: 10px;
   width: 150px;
@@ -17,26 +47,12 @@ body {
   align-items: center;
   padding: 10px;
   font-family: "Georgia", serif;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   transition: width 0.3s, height 0.3s;
 }
 
 /* Valor en el centro */
-.playing-card .value {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-/* Simbolitos arriba y abajo */
-.playing-card .suit {
-  font-size: 2rem;
-}
-
-.playing-card .top {
-  align-self: flex-start;
-}
-
-.playing-card .bottom {
-  align-self: flex-end;
-  transform: rotate(180deg);
-}
+.playing-card .value { font-size: 3rem; font-weight: bold; }
+.playing-card .suit { font-size: 2rem; }
+.playing-card .top { align-self: flex-start; }
+.playing-card .bottom { align-self: flex-end; transform: rotate(180deg); }
